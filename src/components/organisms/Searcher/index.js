@@ -12,6 +12,7 @@ export const Searcher = ({
   const [searchKey, setSearchKey] = useState();
 
   const handleOnClick = () => {
+    if (!searchKey) return;
     handleOnSubmit(searchKey);
   };
   const handleOnChange = (e) => {

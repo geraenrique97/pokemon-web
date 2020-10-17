@@ -15,6 +15,8 @@ const Home = () => {
     try {
       const {data: {pokemons}} = await getPokemons(value);
       setSearchResults(pokemons);
+    } catch (err) {
+      return
     } finally {
       setLoading(false);
     }
